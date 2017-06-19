@@ -1,0 +1,1 @@
+rails generate model Post title:string body:text invoke active_record identical db/migrate/20150606010447_create_posts.rb identical app/models/post.rb invoke rspec create spec/models/post_spec.rb --force 
