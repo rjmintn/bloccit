@@ -14,12 +14,12 @@ require_relative '../config/boot'
       module Rails
         class Server
           def default_options
-            super.merge(Host:  '192.168.1.167', Port: 3000)
+            super.merge(Host:  '192.168.1.164', Port: 3000)
           end
         end
       end
     end
 #end addition
 
-	
+
 require 'rails/commands'
