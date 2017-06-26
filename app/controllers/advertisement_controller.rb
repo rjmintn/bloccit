@@ -12,7 +12,7 @@ class AdvertisementController < ApplicationController
   end
 
   def create
-    @advertisement = Post.new
+    @advertisement = Advertisement.new
     @advertisement.title = params[:advertisement][:title]
     @advertisement.body = params[:advertisement][:body]
     @advertisement.price = params[:advertisement][:price]
