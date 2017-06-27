@@ -15,6 +15,7 @@ group :development do
 end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda'
 end
 # gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -57,5 +58,5 @@ group :development do
   gem 'spring'
 end
 
-#added bootstrap 
+#added bootstrap
 gem 'bootstrap-sass'
