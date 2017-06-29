@@ -7,6 +7,7 @@ module RandomData
 
     sentences.join(" ")
   end
+
   def self.random_sentence
     strings = []
     rand(3..8).times do
@@ -21,4 +22,9 @@ module RandomData
     letters.shuffle!
     letters[0,rand(3..8)].join
   end
+
+  def self.random_price
+    rand(50..100)
+  end
+  
 end
