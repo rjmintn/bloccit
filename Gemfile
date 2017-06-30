@@ -60,3 +60,6 @@ end
 
 #added bootstrap
 gem 'bootstrap-sass'
+
+# password encryption
+gem 'bcrypt'
