@@ -63,3 +63,6 @@ gem 'bootstrap-sass'
 
 # password encryption
 gem 'bcrypt'
+
+# figaro environment variables
+gem 'figaro', '1.0'
