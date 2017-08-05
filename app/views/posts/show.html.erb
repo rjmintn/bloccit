@@ -29,6 +29,7 @@
   <div class="col-md-4">
   <h3>
     <%= pluralize(@post.points, 'point') %>
+    <%= @post.total_votes %>
     <div>
       <small>
         <%= pluralize(@post.up_votes, 'up vote') %>,

@@ -18,7 +18,32 @@
     </div>
   </div>
 </div>
-<h2>Posts</h2>
-<%= render @user.posts %>
-<h2>Comments</h2>
-<%= render @user.comments %>
+<% if user_has_no_posts? %>
+  <p>
+    <%= @user.name %> has no posts.
+  </p>
+<% else %>
+  <h2>Posts</h2>
+  <%= render @user.posts %>
+<% end %>
+
+<% if user_has_no_comments? %>
+  <p>
+    <%= @user.name %> has not made comments.
+  </p>
+<% else %>
+  <h2>Comments</h2>
+  <%= render @user.comments %>
+<% end %>
+  <h2>Favorite Posts</h2>
+  <% @user.favorites.each do |f| %>
+    <h2>
+      <%= image_tag @user.favorite_list(f.post_id) %>
+      <%= Post.find(f).title %>
+    </h2>
+      <%= pluralize(Vote.where(post_id: f.post_id).count, 'vote') %>
+      |
+      <%= pluralize(Comment.where(post_id: f.post_id).count, 'comment') %>
+
+
+  <% end %>

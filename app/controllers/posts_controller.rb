@@ -57,6 +57,7 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body)
   end
+  
   def authorize_user
     post = Post.find(params[:id])
     unless current_user == post.user || current_user.admin?

@@ -31,4 +31,11 @@ module RandomData
   def self.random_email
     "#{random_word}@#{random_word}.#{random_word}"
   end
+
+  def self.random_vote
+    # value = rand(0..1)
+    # value -= 1 if value == 0
+    # value
+    rand(0..1) == 0 ? -1 : 1
+  end
 end
