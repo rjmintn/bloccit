@@ -1,0 +1,13 @@
+<% @user.favorites.each do |f| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= image_tag f.post.user.avatar_url(24) %>
+        <%= f.post.title %>
+      </h4>
+      <%= pluralize(Vote.where(post_id: f.post_id).count, 'vote') %>
+      |
+      <%= pluralize(Comment.where(post_id: f.post_id).count, 'comment') %>
+    </div>
+  </div>
+<% end %>

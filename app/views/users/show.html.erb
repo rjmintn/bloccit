@@ -35,15 +35,5 @@
   <h2>Comments</h2>
   <%= render @user.comments %>
 <% end %>
-  <h2>Favorite Posts</h2>
-  <% @user.favorites.each do |f| %>
-    <h2>
-      <%= image_tag @user.favorite_list(f.post_id) %>
-      <%= Post.find(f).title %>
-    </h2>
-      <%= pluralize(Vote.where(post_id: f.post_id).count, 'vote') %>
-      |
-      <%= pluralize(Comment.where(post_id: f.post_id).count, 'comment') %>
-
-
-  <% end %>
+  <h2 >Favorite Posts</h2>
+  <%= render partial: 'list' %>

@@ -1,7 +1,0 @@
-  <h2>
-    <%= image_tag @favorite.favorite_list(post_id) %>
-    <%= Post.find().title %>
-  </h2>
-    <%= pluralize(Vote.where(post_id: f.post_id).count, 'vote') %>
-    |
-    <%= pluralize(Comment.where(post_id: f.post_id).count, 'comment') %>
